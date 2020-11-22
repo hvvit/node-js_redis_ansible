@@ -34,11 +34,12 @@ checkCache = (req, res, next) => {
   redis_client.get(name, (err, data) => {
     if (err) {
       console.log(err);
-      res.status(500).send(err);
+      res.status(500).json(err);
     }
     //if no match found
     if (data != null) {
-      res.send(data);
+      datanew=JSON.parse(data);
+      res.json(datanew);
     } else {
       //proceed to next middleware function
       next();
