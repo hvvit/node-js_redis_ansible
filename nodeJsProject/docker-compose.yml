@@ -1,0 +1,8 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    image: 'harsh7896/dev:nodejs-redis-assignment_20201122'
+    ports:
+      - "5000:5000"

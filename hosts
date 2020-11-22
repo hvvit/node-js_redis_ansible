@@ -1,0 +1,10 @@
+[docker-swarm-managers]
+192.168.0.117 ansible_user=ubuntu
+192.168.0.116 ansible_user=ubuntu
+192.168.0.118 ansible_user=ubuntu
+[docker-swarm]
+192.168.0.117 ansible_user=ubuntu
+192.168.0.116 ansible_user=ubuntu
+192.168.0.118 ansible_user=ubuntu
+[deploying-server]
+192.168.0.118 ansible_user=ubuntu
