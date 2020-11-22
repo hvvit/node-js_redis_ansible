@@ -20,3 +20,24 @@ Get Machines from the cloud vendor. It can be from aws/gcp/digital-ocean
 * for local testing docker and docker compose
 ```
 
+## FileStructure
+Following is the file structure for the project.
+
+```
+docker-swarm/                             #{ansible role file}
+            -/README.md
+            -/defaults/main.yml
+            -/handlers/main.yml
+            -/meta/main.yml
+            -/tasks/main.yml
+hosts                                     #{ansible inventory file}
+nodeJsProject/                            #{Nodejs-redis project root directory}
+            -/Dockerfile                  #{Dockerfile for building standalone nodejs project}
+            -/docker-compose.yml          #{docker stack deployment file. Include image from hub.docker.com instead of build directive}
+            -/index.js                    #{index file for node app}
+            -/package-lock.json
+            -/package.json                #{file with dependencies mentioned}
+docker-swarm.yml                          #{ansible playbook for deploying swarm and the nodejs application.}
+```
+
+
