@@ -54,7 +54,7 @@ Error may come due to default network adaptor not having value is eth1 or the de
 
 ```
 export device=<device-adaptor-name>
-sed -i "s/eth0/${device}/g" docker-swarm.yml
+sed -i "s/eth1/${device}/g" docker-swarm.yml
 ```
 
 
