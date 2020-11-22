@@ -40,4 +40,21 @@ nodeJsProject/                            #{Nodejs-redis project root directory}
 docker-swarm.yml                          #{ansible playbook for deploying swarm and the nodejs application.}
 ```
 
+## Deployment
+
+Following are the steps for deployment.
+
+```
+ansible-playbook -i hosts docker-swarm.yml
+```
+
+## Troubleshooting
+
+Error may come due to default network adaptor not having value is eth1 or the default adaptor would have two ip addresses. For this chooes the adaptor with private subnet address. And the other machines can be accessed from it.
+
+```
+export device=<device-adaptor-name>
+sed -i "s/eth0/${device}/g" docker-swarm.yml
+```
+
 
