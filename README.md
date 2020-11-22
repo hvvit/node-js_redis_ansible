@@ -57,4 +57,7 @@ export device=<device-adaptor-name>
 sed -i "s/eth1/${device}/g" docker-swarm.yml
 ```
 
-
+## Further Documentation
+```
+https://github.com/jobin-james/docker-swarm
+```
